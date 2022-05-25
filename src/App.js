@@ -3,12 +3,12 @@ import logo from './logo.svg';
 import './App.css';
 import {Navbar} from "./components/Navbar.js"
 import {Footer} from "./components/Footer.js"
-// import {Item_List} from "./components/ItemListContainer/ItemListContainer.js"
+import {Item_List} from "./components/ItemListContainer/ItemListContainer.js"
 
 
-// const Listado = {
-//   productos: "remeras"
-// }
+ const Listado = {
+                 productos: "remeras"
+                   }
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
       <Navbar/>
       {/* ARMAR HERO BANNER */}
       </header>
-      {/* <Item_List productos={Listado.productos}/> */}
+       <Item_List productos={Listado.productos}/> 
       
       <Footer/>
     </div>
