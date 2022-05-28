@@ -1,5 +1,5 @@
 
-    .navbar {
+    .barra {
     background-color: #efe7e2;
         display: flex;
         justify-content: space-around;
@@ -7,24 +7,30 @@
         max-width: 1100px;
         margin: 0 auto;
         padding: 20px 0;
-        
-    
-     
+ 
     }
 
-    .navbar_list {list-style-type: none;
+  
+    .barra_list {list-style-type: none;
     display: flex;
     width: 50%;
     justify-content: space-around;
     align-items: center;
     color: black;
+    padding-top: 20px;
     
     }
+
+    .barra_list li {color: #000000;
+                    }
+    .a             {color: #000000;
+                    list-style-type: none;
+                    text-decoration: none;}
 
     .nav-logo {width: 80px;
                 height: 30px;}
     
-    .navbar_list li:hover {background-color: #000000;
+    .barra_list li:hover {background-color: #000000;
                             color: white;
                             padding: 6px;
                             transition: all 0.3s ease 0s;

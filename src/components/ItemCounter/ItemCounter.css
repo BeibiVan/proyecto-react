@@ -1,0 +1,24 @@
+.itemcounter_container {background-color: #efe7e2;
+                        color: black;
+                        display: flex;
+                        justify-content: center;
+                        width:100%;
+                        height:100px;
+                        align-items: center;
+                        gap: 20px;
+                        text-align: center;
+                        }
+
+.suma {background-color: #000000;
+        color: white;
+        border: black}
+.suma:hover {background-color: #000000;
+            color: white;
+            border: black}
+
+.resta {background-color: #000000;
+        color: white;
+        border: black}
+.resta:hover {background-color: #000000;
+            color: white;
+            border: black}

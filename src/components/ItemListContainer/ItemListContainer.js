@@ -1,12 +1,12 @@
 import "./ItemListContainer.css"
 
-export const Item_List = ({productos}) => {
+export const Item_List = () => {
 
 
     return(
-        <div className="Item_container">
+        <div id= "productos_container" className="Item_container">
         <h1> ¡LO NUEVO! </h1>
-        <p>{productos}</p>
+        <p></p>
         </div>
     )
 }

@@ -1,0 +1,16 @@
+
+
+.div_hero {justify-content: center;
+            width: 100%;
+            }
+
+.main_banner {width: 70%;
+                height: 500px;
+            margin-left: 40px;}
+
+.button {margin-right: 22%;
+    background-color: black;
+    border: black;}
+
+.button:hover {background-color: #af795d;}
+

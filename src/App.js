@@ -1,25 +1,26 @@
 import logo from './logo.svg';
-// import "./components/Styles-navbar.css"
 import './App.css';
-import {Navbar} from "./components/Navbar.js"
-import {Footer} from "./components/Footer.js"
+import 'bootstrap/dist/css/bootstrap.min.css'
+import {Navbar} from "./components/Navbar/Navbar.js"
+import {Banner} from "./components/BannerHero/Banner-hero.js"
 import {Item_List} from "./components/ItemListContainer/ItemListContainer.js"
+import {Footer} from "./components/Footer/Footer.js"
+import {ItemCounter} from "./components/ItemCounter/ItemCounter.js"
 
-
- const Listado = {
-                 productos: "remeras"
-                   }
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
       <Navbar/>
-      {/* ARMAR HERO BANNER */}
+      <Banner/>
       </header>
-       <Item_List productos={Listado.productos}/> 
+
+        
+        <Item_List/> 
+        <ItemCounter/>
       
-      <Footer/>
+        <Footer/>
     </div>
    
   );
