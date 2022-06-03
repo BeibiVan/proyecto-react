@@ -3,7 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {Navbar} from "./components/Navbar/Navbar.js"
 import {Banner} from "./components/BannerHero/Banner-hero.js"
-import {Item_List} from "./components/ItemListContainer/ItemListContainer.js"
+import {ItemList} from "./components/ItemListContainer/ItemListContainer.js"
 import {Footer} from "./components/Footer/Footer.js"
 import {ItemCounter} from "./components/ItemCounter/ItemCounter.js"
 
@@ -17,8 +17,7 @@ function App() {
       </header>
 
         
-        <Item_List/> 
-        <ItemCounter/>
+        <ItemList/> 
       
         <Footer/>
     </div>
