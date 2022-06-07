@@ -22,7 +22,7 @@ export const ItemCounter = () => {
         <div className="itemcounter_container">
             
             <Button variant="primary" className= "resta" onClick={Decrementar}>-</Button>
-            <p>{contador}</p>
+            <p >{contador}</p>
             <Button variant="primary" className= "suma" onClick={Incrementar}>+</Button>
             
             

@@ -1,0 +1,27 @@
+.Detail_Item_container {padding-top: 15%;
+    background-color: #efe7e2;
+    min-height: 1000px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 70%;
+    flex-wrap: wrap;
+    margin-left: 15%;
+    }
+
+.Details_card_container {width: 250px;
+height: 450px;
+border-radius: 8px;
+box-shadow: 0 5px 10px rgba(0,0,0,.2);
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+transition: all 0.25s;
+cursor: pointer;
+}
+
+.Details_card_container img {width: 200px;
+height: 250px;
+}

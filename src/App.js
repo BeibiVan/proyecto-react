@@ -6,20 +6,31 @@ import {Banner} from "./components/BannerHero/Banner-hero.js"
 import {ItemList} from "./components/ItemListContainer/ItemListContainer.js"
 import {Footer} from "./components/Footer/Footer.js"
 import {ItemCounter} from "./components/ItemCounter/ItemCounter.js"
+import { GetItem } from './components/ItemDetailContainer/ItemDetailContainer';
+import {BrowserRouter, Routes, Route} from "react-router-dom"
+
+ 
 
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+      </header>
+      <BrowserRouter>
       <Navbar/>
       <Banner/>
-      </header>
+      <ItemList/>
+      <Routes>
 
-        
-        <ItemList/> 
       
-        <Footer/>
+      <Route path= "/" element= {<GetItem/>}/>
+
+      
+      
+      <Route path= "/" element= {<Footer/>}/>
+      </Routes>
+     </BrowserRouter>
     </div>
    
   );
