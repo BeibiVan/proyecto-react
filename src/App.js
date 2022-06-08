@@ -8,6 +8,8 @@ import {Footer} from "./components/Footer/Footer.js"
 import {ItemCounter} from "./components/ItemCounter/ItemCounter.js"
 import { GetItem } from './components/ItemDetailContainer/ItemDetailContainer';
 import {BrowserRouter, Routes, Route} from "react-router-dom"
+import {ItemListContainer} from "./components/ItemListContainer/ItemListContainer"
+import {ItemDetailContainer} from "./components/ItemDetailContainer/ItemDetailContainer.js"
 
  
 
@@ -16,21 +18,16 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      </header>
-      <BrowserRouter>
+     
+      
       <Navbar/>
       <Banner/>
-      <ItemList/>
-      <Routes>
-
+       </header>
+      <ItemListContainer/>
+      <ItemDetailContainer/>
       
-      <Route path= "/" element= {<GetItem/>}/>
-
+       <Footer/>
       
-      
-      <Route path= "/" element= {<Footer/>}/>
-      </Routes>
-     </BrowserRouter>
     </div>
    
   );

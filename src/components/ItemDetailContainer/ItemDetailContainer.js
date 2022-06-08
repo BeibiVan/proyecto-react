@@ -1,51 +1,42 @@
-import "./ItemDetailContainer.css"
-import {useState,  useEffect } from "react"
-import { Productos } from "../Item/ItemList"
+ import "./ItemDetailContainer.css"
+ import {useState,  useEffect } from "react"
+ import { Productos } from "../ItemListContainer/Productos.js"
+ import { ItemDetail } from "./ItemDetail"
 
-export const GetItem = () => {
+ export const ItemDetailContainer = () => {
 
-    const [detail, setDetail] = useState ([])
+     const [details, setDetail] = useState ([])
      
 
-    const PedirDetails = () => {
+     const PedirDetails = () => {
 
-        return new Promise ((resolve,reject) => {
+         return new Promise ((resolve,reject) => {
 
-            setTimeout (()=>{
-                resolve (Productos)
-            }, 2000)
+             setTimeout (()=>{
+                 resolve (Productos)
+             }, 2000)
 
-        })
-    }
+         })
+     }
 
-    useEffect (() => {
+     useEffect (() => {
 
-    PedirDetails ()
-        .then ((resp) => {
-            setDetail (resp)
-        })
+     PedirDetails ()
+         .then ((resp) => {
+            setDetail(resp.find(item => item.id == 1))
+         })
 
-    }, [])
+     }, [])
 
 
-return (
+ return (
     
 
-    <div className="Detail_Item_container"> 
+     <div className="Detail_Item_container"> 
 
-    {
-        detail.map((details) => (
-             <div className="Details_card_container">
-                 <img src={details.img}></img>
-                 <h4>{details.producto}</h4>
-                 <h5>{details.descripción}</h5>
-                 
-             </div>
-        ))
-        
-    }
+      <ItemDetail  item={details}/>
    
-    </div>
-)
+     </div>
+ )
 
-}
+ }
