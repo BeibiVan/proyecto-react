@@ -9,7 +9,7 @@ export const ItemDetail = ({item}) => {
         <div className="Details_card_container">
             <img src={item.img}></img>
                   <h4>{item.producto}</h4>
-                  <h5>{item.descripción}</h5>
+                  <p>{item.descripción}</p>
         </div>
 
     )
