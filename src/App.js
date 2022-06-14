@@ -14,13 +14,12 @@ import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetail
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <Navbar />
-      </header>
-      <Banner />
+
+
       <BrowserRouter>
+          <Navbar />  
         <Routes>
-          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/" element={<> <Banner /> <ItemListContainer /> </>} />
           <Route path="/categoria/:id" element={<ItemListContainer />} />
           <Route path="/item/:id" element={<ItemDetailContainer />} />
         </Routes>

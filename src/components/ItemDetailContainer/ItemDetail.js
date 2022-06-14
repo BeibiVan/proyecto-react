@@ -1,3 +1,4 @@
+import { ItemCounter } from "../ItemCounter/ItemCounter"
 
 
 
@@ -10,6 +11,8 @@ export const ItemDetail = ({item}) => {
             <img src={item.img}></img>
                   <h4>{item.producto}</h4>
                   <p>{item.descripción}</p>
+                  <ItemCounter 
+                    max={item.cantidad}    />
         </div>
 
     )

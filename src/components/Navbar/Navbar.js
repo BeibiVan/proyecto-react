@@ -10,12 +10,12 @@ export const Navbar = () => {
 
     return (
         <div className="barra" >
-            <img className="nav-logo" src={navlogo} alt="nav-logo"></img>
+            <Link to={"/"}><img className="nav-logo" src={navlogo} alt="nav-logo"></img> </Link>
 
             <ul className="barra_list">
-                <a className="a" href=""><li className="barra_list__1"> Productos</li></a>
-                <a className="a" href=""><li className="barra_list__1"> Nosotros</li></a>
-                <a className="a" href=""><li className="barra_list__1"> Contacto</li></a>
+                <Link to={"/productos"}> <li className="barra_list__1"> Productos</li></Link>
+                <Link to={"/nosotros"}>   <li className="barra_list__1"> Nosotros</li></Link>
+                <Link to={"/contacto"}>    <li className="barra_list__1"> Contacto</li></Link>
                 <li className="barra_list__1"> <Carrito /></li>
                 {/* <li className= "mobile_menu">  <AiOutlineDown/></li> */}
             </ul>
