@@ -2,10 +2,13 @@ import "./ItemCounter.css"
 import Button from 'react-bootstrap/Button'
 import { useState } from "react"
 
-export const ItemCounter = ({max}) => {
+
+export const ItemCounter = ({max, setContador, contador, handleAgregar}) => {
+
 
     
-     const [contador, setContador] = useState (1)
+    
+     
 
      const Incrementar = () => {
          contador < max && setContador (contador + 1)
@@ -18,6 +21,7 @@ export const ItemCounter = ({max}) => {
      }
      
 
+     
     return (
 
         <div className="itemcounter_container">
@@ -25,7 +29,7 @@ export const ItemCounter = ({max}) => {
             <Button variant="primary" className= "resta" onClick={Decrementar}>-</Button>
             <p >{contador}</p>
             <Button variant="primary" className= "suma" onClick={Incrementar}>+</Button>
-            <Button variant="primary" className= "addtocart" >Agregar al carrito</Button>
+            <Button variant="primary" className= "addtocart" onClick={handleAgregar} >Agregar al carrito</Button>
             
             
         </div>
