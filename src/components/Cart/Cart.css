@@ -1,0 +1,15 @@
+.carrito_container {
+    background-color: #efe7e2;
+}
+
+.remove_button {
+    background-color: red;
+    color: white;
+    border: solid red;
+}
+
+.remove_button:hover {
+    background-color: rgb(182, 0, 0);
+    border: solid rgb(182, 0, 0);
+}
+

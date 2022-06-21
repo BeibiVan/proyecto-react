@@ -16,7 +16,7 @@ export const Navbar = () => {
                 <Link to={"/productos"}> <li className="barra_list__1"> Productos</li></Link>
                 <Link to={"/nosotros"}>   <li className="barra_list__1"> Nosotros</li></Link>
                 <Link to={"/contacto"}>    <li className="barra_list__1"> Contacto</li></Link>
-                <li className="barra_list__1"> <Carrito /></li>
+                <li> <Carrito /></li>
                 {/* <li className= "mobile_menu">  <AiOutlineDown/></li> */}
             </ul>
 

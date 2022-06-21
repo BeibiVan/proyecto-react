@@ -14,7 +14,7 @@
 
              setTimeout (()=>{
                  resolve (Productos)
-             }, 2000)
+             }, 1000)
 
          })
      }

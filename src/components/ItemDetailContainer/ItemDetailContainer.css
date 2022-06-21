@@ -1,12 +1,12 @@
-.Detail_Item_container {padding-top: 15%;
+.Detail_Item_container {padding-top: 10%;
     background-color: #efe7e2;
     min-height: 1000px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px;
-    width: 70%;
+    
     flex-wrap: wrap;
-    margin-left: 15%;
+    
     }
 
 .Details_card_container {width: 250px;
@@ -27,3 +27,12 @@ cursor: pointer;
 .Details_card_container img {width: 200px;
 height: 250px;
 }
+
+.finish_button{ background-color: #000000;
+    color: white;
+    border: black;
+    margin-left: 10px;}
+
+.finish_button:hover {background-color: #af795d;
+    color: white;
+    border: black;}

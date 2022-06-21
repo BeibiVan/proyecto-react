@@ -5,7 +5,12 @@
   background-color: #efe7e2;}
 
   a {color: black;
-    text-decoration: none;}
+    text-decoration: none;
+    z-index: 99}
+    
+  a:hover {color: black;
+    text-decoration: none;
+    z-index: 99}
 
 .App {
   text-align: center;

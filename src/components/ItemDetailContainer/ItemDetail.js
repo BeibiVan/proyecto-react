@@ -2,6 +2,8 @@ import { ItemCounter } from "../ItemCounter/ItemCounter"
 import { useNavigate, Link } from "react-router-dom"
 import { useContext, useState } from "react"
 import { CartContext } from "../CartContext/CartContext"
+import Button  from 'react-bootstrap/Button'
+
 
 
 
@@ -33,7 +35,7 @@ export const ItemDetail = ({item}) => {
 
                     {
                         isInCart(item.id)
-                        ? <Link to= "/cart">Terminar mi compra</Link>
+                        ? <Link to= "/cart"> <Button className="finish_button"> Terminar mi compra</Button></Link>
                         :
                     <ItemCounter 
                         max={item.stock} 
