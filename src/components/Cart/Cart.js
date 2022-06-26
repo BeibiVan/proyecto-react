@@ -36,6 +36,7 @@ export const Cart = () => {
 
                         <h5>TOTAL: ${precioTotal()}</h5>
                         <h4> <Button className='remove_button' onClick={vaciarCarrito}>  Vaciar el carrito  </Button></h4>
+                       
 
 
                     </div>

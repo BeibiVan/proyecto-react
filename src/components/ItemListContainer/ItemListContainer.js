@@ -4,12 +4,14 @@ import { useState, useEffect } from "react"
 import { ItemList } from "../Item/ItemList"
 import { collection, getDoc, getDocs, } from "firebase/firestore"
 import { db } from "../Firebase/config"
+import { useParams } from "react-router-dom"
 
 //import {ItemCounter} from "./components/ItemCounter/ItemCounter.js"
 
 export const ItemListContainer = () => {
 
     const [items, setItems] = useState([])
+    const {categoryId} = useParams ()
 
     const PedirDatos = () => {
 
@@ -27,10 +29,7 @@ export const ItemListContainer = () => {
     useEffect(() => {
 
         PedirDatos()
-        // .then((respuesta) => {
-        //     setItems(respuesta)
-        // })
-
+        
         const productosReferencia = collection(db, "productos")
         getDocs(productosReferencia)
 
@@ -46,7 +45,7 @@ export const ItemListContainer = () => {
             })
 
 
-    }, [])
+    }, [categoryId])
 
 
     return (
