@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 import { Productos } from "../ItemListContainer/Productos.js"
 import { ItemDetail } from "./ItemDetail"
 import { useParams } from "react-router-dom"
-import { doc, getDoc } from "firebase/firestore"
+import { doc, getDocs, collection } from "firebase/firestore"
 import { db } from "../Firebase/config"
 
 
@@ -25,13 +25,22 @@ export const ItemDetailContainer = () => {
 
     useEffect(() => {
 
-        const docRef = doc (db, "productos", itemId)
-        getDoc (docRef)
-        .then ((doc)=> {
-            setDetail ({id: doc.id, ...doc.data ()})
-        })
+        PedirDetails()
 
-    }, [])
+        const detailsReferencia = collection(db, "details")
+        getDocs(detailsReferencia)
+
+            .then((resp) => {
+                const detailsItemsFirebase = resp.docs.map((doc) => {
+                    return {
+                        id: doc.id,
+                        ...doc.data()
+                    }
+                })
+
+                 setDetail(detailsItemsFirebase) 
+            })
+    }, [itemId])
 
 
     return (
